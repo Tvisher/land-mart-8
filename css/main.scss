@@ -1,11 +1,40 @@
 @font-face {
     font-family: 'Muller';
-    src: url('../fonts/Mller.woff2') format('woff2'),
-        url('../fonts/Mller.ttf') format('ttf');
-    font-weight: normal;
+    src: url('../fonts/MullerBlack.woff2') format('woff2'),
+        url('../fonts/MullerBlack.otf') format('otf');
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerBold.woff2') format('woff2'),
+        url('../fonts/MullerBold.otf') format('otf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerLight.woff2') format('woff2'),
+        url('../fonts/MullerLight.otf') format('otf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/MullerRegular.woff2') format('woff2'),
+        url('../fonts/MullerRegular.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 /* Указываем box sizing */
 *,
