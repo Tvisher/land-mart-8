@@ -1,0 +1,339 @@
+@font-face {
+    font-family: 'Muller';
+    src: url('../fonts/Mller.woff2') format('woff2'),
+        url('../fonts/Mller.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd,
+span,
+p {
+    margin: 0;
+    line-height: initial;
+}
+
+span {
+    display: block;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+
+label,
+input {
+    display: block;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    display: inline;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+body {
+    font-family: 'Muller', sans-serif;
+    background: linear-gradient(90deg, #FAEBE3 0%, #FBF3EC 100%);
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.container {
+    max-width: 1960px;
+    margin: auto;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.header {
+    padding-top: 48px;
+}
+
+.logo {
+    width: 250px;
+    height: 68px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.main__inner {
+    padding-top: 250px;
+    padding-bottom: 220px;
+    padding-left: 100px;
+}
+
+.main-title-img {
+    width: 824px;
+    height: 485px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.main {
+    position: relative;
+    padding-bottom: 140px;
+
+}
+
+.main-bg {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 854px;
+    height: 1475px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: top right;
+    }
+}
+
+.main__content {
+    position: relative;
+    z-index: 2;
+}
+
+.text-container {
+    max-width: 960px;
+    padding-bottom: 120px;
+    padding-left: 100px;
+
+
+    .title {
+        color: #000;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin-bottom: 72px;
+    }
+
+    .descr {
+        color: #000;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 166%;
+        padding-top: 45px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: '';
+            width: 64px;
+            height: 6px;
+            border-radius: 20px;
+            background: #F37B20;
+        }
+    }
+}
+
+
+.form-item {
+    padding: 60px 96px 72px 72px;
+    border-radius: 40px;
+    background: #FFF;
+    box-shadow: 0px 10px 42px 0px #EFD3C4;
+    border: 2px solid #FFF;
+
+    &.err {
+        border-color: red;
+    }
+}
+
+.qestion-number {
+    color: #808080;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &::before {
+        border-radius: 20px;
+        background: #F37B20;
+        width: 28px;
+        height: 6px;
+        content: '';
+    }
+}
+
+.forms {
+    max-width: 1270px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 100px;
+
+}
+
+.qestion-title {
+    color: #000;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 32px;
+}
+
+.qestion-description {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin-bottom: 56px;
+}
+
+.answer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.answer-item {
+    position: relative;
+    cursor: pointer;
+
+    span {
+        padding: 17px 56px;
+        border-radius: 10px;
+        border: 2px solid #CCC;
+        background: #FFF;
+        color: #000;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 150%;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #F37B20;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 21.2px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            background-color: #F37B20;
+            opacity: 0;
+        }
+    }
+
+    input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked+span {
+            border-color: #F37B20;
+
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.submit-btn {
+    width: 100%;
+    padding: 32px;
+    border-radius: 20px;
+    background: #FF9342;
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+    cursor: pointer;
+}
